@@ -1,5 +1,6 @@
 import {getMessages} from 'next-intl/server';
 import Providers from '@/src/app/providers/providers';
+import Header from "@/src/components/layout/header";
 
 export default async function RootLayout({
                                            children
@@ -14,6 +15,7 @@ export default async function RootLayout({
     <html lang={locale}>
     <body>
     <Providers locale={locale} messages={messages}>
+      <Header />
       {children}
     </Providers>
     </body>
