@@ -102,8 +102,6 @@ const HomePage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
-
-
       {/* Search Bar */}
       <div className="bg-[#0093d3] py-5">
         <div className="max-w-7xl mx-auto px-4">
