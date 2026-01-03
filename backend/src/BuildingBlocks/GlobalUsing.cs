@@ -1,0 +1,11 @@
+global using System;
+global using System.Net;
+global using System.Text;
+global using Newtonsoft.Json;
+global using System.Net.Mime;
+global using System.Diagnostics;
+global using System.Threading.Tasks;
+global using Microsoft.AspNetCore.Http;
+global using Microsoft.Extensions.Logging;
+global using BuildingBlocks.Extensions.Result;
+global using BuildingBlocks.Extensions.Logger;
