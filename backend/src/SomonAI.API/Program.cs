@@ -1,41 +1,83 @@
-var builder = WebApplication.CreateBuilder(args);
+using SomonAI.API.Infrastructure.Middlewares;
 
-// Add services to the container.
-// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
-builder.Services.AddOpenApi();
+WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
-var app = builder.Build();
+builder.Services.AddControllers();
+builder.Services.AddHttpContextAccessor();
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
+builder.Services.Configure<MongoDbSettings>(
+    builder.Configuration.GetSection(MongoDbSettings.SectionName));
+
+builder.Services.AddSingleton<IMongoDbContext, MongoDbContext>();
+builder.Services.AddScoped<DbInitializer>();
+
+builder.Services.AddLocalization();
+builder.Services.AddLocalizationServices();
+builder.Services.AddApplicationServices(builder.Configuration);
+
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen(options =>
 {
-    app.MapOpenApi();
-}
+    options.SwaggerDoc("v1", new OpenApiInfo
+    {
+        Title = "Somon AI API",
+        Version = "v1",
+        Description = "Marketplace API with multilingual support (ru/tj/en)"
+    });
 
-app.UseHttpsRedirection();
+    options. OperationFilter<LanguageHeaderFilter>();
+    
+    options.EnableAnnotations();
+    
+    options.CustomSchemaIds(GetSchemaId);
+});
 
-var summaries = new[]
+builder.Services.AddCors(options =>
 {
-    "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-};
+    options.AddPolicy("AllowAll", policy =>
+    {
+        policy.AllowAnyOrigin()
+            .AllowAnyMethod()
+            .AllowAnyHeader()
+            .WithExposedHeaders("X-Language");
+    });
+});
 
-app.MapGet("/weatherforecast", () =>
+WebApplication app = builder.Build();
+
+app.UseSwagger();
+app.UseSwaggerUI(c =>
 {
-    var forecast =  Enumerable.Range(1, 5).Select(index =>
-        new WeatherForecast
-        (
-            DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-            Random.Shared.Next(-20, 55),
-            summaries[Random.Shared.Next(summaries.Length)]
-        ))
-        .ToArray();
-    return forecast;
-})
-.WithName("GetWeatherForecast");
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "Somon AI API v1");
+    c.RoutePrefix = "swagger";
+});
+
+app.UseStaticFiles();
+
+app.UseCors("AllowAll");
+app.UseMiddleware<LanguageMiddleware>();
+app.UseAuthorization();
+
+app.MapControllers();
+
+await app.Services.InitializeDatabaseAsync();
 
 app.Run();
 
-record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
+static string GetSchemaId(Type type)
 {
-    public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
+    if (type. IsGenericType)
+    {
+        var genericTypeName = type.Name.Split('`')[0];
+        var genericArgs = type.GetGenericArguments();
+        
+        var argNames = string.Join("", genericArgs.Select(GetSchemaId));
+        
+        return $"{genericTypeName}Of{argNames}";
+    }
+
+    return type.Name
+        .Replace("Dto", "")
+        .Replace("Result", "")
+        .Replace("Response", "");
 }
