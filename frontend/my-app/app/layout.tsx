@@ -2,8 +2,7 @@ import type {Metadata} from "next";
 import {Geist} from "next/font/google";
 import "./globals.css";
 import Providers from "@/app/providers/providers";
-import {NextIntlClientProvider} from 'next-intl';
-import {getLocale, getMessages} from 'next-intl/server';
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -17,20 +16,19 @@ export const metadata: Metadata = {
 
 export default async function RootLayout({
                                            children,
-                                         }: Readonly<{ children: React.ReactNode; }>) {
-  const locale = await getLocale();
-  const messages = await getMessages();
+                                         }: Readonly<{
+  children: React.ReactNode;
+}>) {
+
 
   return (
-    <html lang={locale}>
+    <html lang="en">
     <body
       className={`${geistSans.className} `}
     >
-      <NextIntlClientProvider locale={locale} messages={messages}>
-        <Providers>
-          {children}
-        </Providers>
-      </NextIntlClientProvider>
+      <Providers>
+        {children}
+      </Providers>
     </body>
     </html>
   );
