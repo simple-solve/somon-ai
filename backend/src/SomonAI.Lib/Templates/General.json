@@ -1,0 +1,123 @@
+{
+  "title": "General goods listing draft",
+  "category": "general",
+  "overall_confidence": 0.0,
+  "attributes": [
+    {
+      "name": "item_type",
+      "required": true,
+      "value": null,
+      "confidence": 0.0,
+      "needs_confirmation": false,
+      "source": null
+    },
+    {
+      "name": "brand",
+      "required": false,
+      "value": null,
+      "confidence": 0.0,
+      "needs_confirmation": false,
+      "source": null
+    },
+    {
+      "name": "model",
+      "required": false,
+      "value": null,
+      "confidence": 0.0,
+      "needs_confirmation": false,
+      "source": null
+    },
+    {
+      "name": "color",
+      "required": false,
+      "value": null,
+      "confidence": 0.0,
+      "needs_confirmation": false,
+      "source": null
+    },
+    {
+      "name": "condition",
+      "required": true,
+      "value": null,
+      "confidence": 0.0,
+      "needs_confirmation": false,
+      "source": null
+    },
+    {
+      "name": "key_features",
+      "required": true,
+      "value": null,
+      "confidence": 0.0,
+      "needs_confirmation": false,
+      "source": null
+    },
+    {
+      "name": "package_contents",
+      "required": false,
+      "value": null,
+      "confidence": 0.0,
+      "needs_confirmation": false,
+      "source": null
+    },
+    {
+      "name": "warranty",
+      "required": false,
+      "value": null,
+      "confidence": 0.0,
+      "needs_confirmation": false,
+      "source": null
+    },
+    {
+      "name": "size",
+      "required": false,
+      "value": null,
+      "confidence": 0.0,
+      "needs_confirmation": false,
+      "source": null
+    },
+    {
+      "name": "material",
+      "required": false,
+      "value": null,
+      "confidence": 0.0,
+      "needs_confirmation": false,
+      "source": null
+    }
+  ],
+  "photos": {
+    "quality_notes": [],
+    "quality_assessment": {
+      "lighting": null,
+      "blur": null,
+      "framing": null,
+      "overall_score": null
+    },
+    "missing_shots": [
+      "front_view",
+      "back_view",
+      "sides",
+      "label_or_specs",
+      "accessories"
+    ],
+    "sensitive_content": []
+  },
+  "text_suggestions": {
+    "titles": [],
+    "descriptions": [],
+    "consistency_warnings": []
+  },
+  "readiness_checklist": {
+    "required_fields_filled": {},
+    "readiness_percentage": 0,
+    "missing_items": [],
+    "suggestions": [],
+    "inconsistencies": []
+  },
+  "clarifying_questions": [],
+  "user_inputs": {
+    "price": null,
+    "additional_notes": null
+  },
+  "language": null,
+  "timestamp": null
+}

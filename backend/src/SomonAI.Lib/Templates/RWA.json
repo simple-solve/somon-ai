@@ -1,0 +1,125 @@
+{
+  "title": "Real estate listing draft",
+  "category": "rwa",
+  "overall_confidence": 0.0,
+  "attributes": [
+    {
+      "name": "property_type",
+      "required": true,
+      "value": null,
+      "confidence": 0.0,
+      "needs_confirmation": false,
+      "source": null
+    },
+    {
+      "name": "rooms",
+      "required": true,
+      "value": null,
+      "confidence": 0.0,
+      "needs_confirmation": false,
+      "source": null
+    },
+    {
+      "name": "area_sqm",
+      "required": true,
+      "value": null,
+      "confidence": 0.0,
+      "needs_confirmation": false,
+      "source": null
+    },
+    {
+      "name": "floor",
+      "required": false,
+      "value": null,
+      "confidence": 0.0,
+      "needs_confirmation": false,
+      "source": null
+    },
+    {
+      "name": "floors_total",
+      "required": false,
+      "value": null,
+      "confidence": 0.0,
+      "needs_confirmation": false,
+      "source": null
+    },
+    {
+      "name": "condition",
+      "required": true,
+      "value": null,
+      "confidence": 0.0,
+      "needs_confirmation": false,
+      "source": null
+    },
+    {
+      "name": "amenities",
+      "required": false,
+      "value": null,
+      "confidence": 0.0,
+      "needs_confirmation": false,
+      "source": null
+    },
+    {
+      "name": "location_hint",
+      "required": false,
+      "value": null,
+      "confidence": 0.0,
+      "needs_confirmation": false,
+      "source": null
+    },
+    {
+      "name": "heating",
+      "required": false,
+      "value": null,
+      "confidence": 0.0,
+      "needs_confirmation": false,
+      "source": null
+    },
+    {
+      "name": "year_built",
+      "required": false,
+      "value": null,
+      "confidence": 0.0,
+      "needs_confirmation": false,
+      "source": null
+    }
+  ],
+  "photos": {
+    "quality_notes": [],
+    "quality_assessment": {
+      "lighting": null,
+      "blur": null,
+      "framing": null,
+      "overall_score": null
+    },
+    "missing_shots": [
+      "building_front",
+      "entrance",
+      "living_room",
+      "kitchen",
+      "bathroom",
+      "bedroom",
+      "balcony_view"
+    ],
+    "sensitive_content": []
+  },
+  "text_suggestions": {
+    "titles": [],
+    "descriptions": [],
+    "consistency_warnings": []
+  },
+  "readiness_checklist": {
+    "required_fields_filled": {},
+    "readiness_percentage": 0,
+    "missing_items": [],
+    "suggestions": [],
+    "inconsistencies": []
+  },
+  "clarifying_questions": [],
+  "user_inputs": {
+    "price": null,
+    "additional_notes": null
+  },
+  "language": null,
+  "timestamp": null
+}

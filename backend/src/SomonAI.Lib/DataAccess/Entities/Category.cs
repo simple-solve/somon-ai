@@ -1,7 +1,7 @@
-namespace SomonAI.Lib.DataAccess.Entities;
+namespace SomonAI.Lib. DataAccess.Entities;
 
 /// <summary>
-/// Represents a product category with multilingual support (Russian + Tajik)
+/// Represents a product category with multilingual support (Russian + Tajik + English)
 /// </summary>
 public sealed class Category
 {
@@ -28,10 +28,16 @@ public sealed class Category
     public string NameTj { get; set; } = null!;
 
     /// <summary>
+    /// Category name in English
+    /// </summary>
+    [BsonElement("nameEn")]
+    public string NameEn { get; set; } = null!;
+
+    /// <summary>
     /// Category description in Russian
     /// </summary>
     [BsonElement("descriptionRu")]
-    public string? DescriptionRu { get; set; }
+    public string?  DescriptionRu { get; set; }
 
     /// <summary>
     /// Category description in Tajik
@@ -40,10 +46,16 @@ public sealed class Category
     public string? DescriptionTj { get; set; }
 
     /// <summary>
+    /// Category description in English
+    /// </summary>
+    [BsonElement("descriptionEn")]
+    public string?  DescriptionEn { get; set; }
+
+    /// <summary>
     /// Icon or emoji for the category
     /// </summary>
     [BsonElement("icon")]
-    public string? Icon { get; set; }
+    public string?  Icon { get; set; }
 
     /// <summary>
     /// Display order for sorting
@@ -57,7 +69,9 @@ public sealed class Category
     [BsonElement("isActive")]
     public bool IsActive { get; set; } = true;
 
-    [BsonElement("createdAt")] public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+    [BsonElement("createdAt")] 
+    public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
 
-    [BsonElement("updatedAt")] public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
+    [BsonElement("updatedAt")] 
+    public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
 }
