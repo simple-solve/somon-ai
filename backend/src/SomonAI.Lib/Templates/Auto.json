@@ -1,0 +1,133 @@
+{
+  "title": "Auto listing draft",
+  "category": "auto",
+  "overall_confidence": 0.0,
+  "attributes": [
+    {
+      "name": "body_type",
+      "required": true,
+      "value": null,
+      "confidence": 0.0,
+      "needs_confirmation": false,
+      "source": null
+    },
+    {
+      "name": "make",
+      "required": true,
+      "value": null,
+      "confidence": 0.0,
+      "needs_confirmation": false,
+      "source": null
+    },
+    {
+      "name": "model",
+      "required": true,
+      "value": null,
+      "confidence": 0.0,
+      "needs_confirmation": false,
+      "source": null
+    },
+    {
+      "name": "year",
+      "required": true,
+      "value": null,
+      "confidence": 0.0,
+      "needs_confirmation": false,
+      "source": null
+    },
+    {
+      "name": "color",
+      "required": true,
+      "value": null,
+      "confidence": 0.0,
+      "needs_confirmation": false,
+      "source": null
+    },
+    {
+      "name": "mileage",
+      "required": true,
+      "value": null,
+      "unit": "km",
+      "confidence": 0.0,
+      "needs_confirmation": false,
+      "source": null
+    },
+    {
+      "name": "fuel_type",
+      "required": false,
+      "value": null,
+      "confidence": 0.0,
+      "needs_confirmation": false,
+      "source": null
+    },
+    {
+      "name": "transmission",
+      "required": false,
+      "value": null,
+      "confidence": 0.0,
+      "needs_confirmation": false,
+      "source": null
+    },
+    {
+      "name": "drive_type",
+      "required": false,
+      "value": null,
+      "confidence": 0.0,
+      "needs_confirmation": false,
+      "source": null
+    },
+    {
+      "name": "vin",
+      "required": false,
+      "value": null,
+      "confidence": 0.0,
+      "needs_confirmation": false,
+      "source": null
+    },
+    {
+      "name": "condition",
+      "required": false,
+      "value": null,
+      "confidence": 0.0,
+      "needs_confirmation": false,
+      "source": null
+    }
+  ],
+  "photos": {
+    "quality_notes": [],
+    "quality_assessment": {
+      "lighting": null,
+      "blur": null,
+      "framing": null,
+      "overall_score": null
+    },
+    "missing_shots": [
+      "front_view",
+      "rear_view",
+      "side_view",
+      "interior_front",
+      "interior_back",
+      "dashboard_odometer"
+    ],
+    "sensitive_content": []
+  },
+  "text_suggestions": {
+    "titles": [],
+    "descriptions": [],
+    "consistency_warnings": []
+  },
+  "readiness_checklist": {
+    "required_fields_filled": {},
+    "readiness_percentage": 0,
+    "missing_items": [],
+    "suggestions": [],
+    "inconsistencies": []
+  },
+  "clarifying_questions": [],
+  "user_inputs": {
+    "price": null,
+    "additional_notes": null
+  },
+  "language": null,
+  "timestamp": null
+}

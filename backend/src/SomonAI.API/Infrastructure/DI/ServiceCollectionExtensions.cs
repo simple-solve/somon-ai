@@ -20,6 +20,10 @@ public static class ServiceCollectionExtensions
         services.AddScoped<IProductService, ProductService>();
         services.AddScoped<IFileService, FileService>();
 
+        services.Configure<GeminiSettings>(configuration.GetSection(GeminiSettings.SectionName));
+        services.AddHttpClient();
+        services.AddScoped<IGeminiService, GeminiService>();
+
         return services;
     }
 }
