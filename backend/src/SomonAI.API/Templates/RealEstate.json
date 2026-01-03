@@ -1,0 +1,124 @@
+{
+  "category": "Недвижимость",
+  "extracted_characteristics": {
+    "type": {
+      "value": "Квартира",
+      "confidence": 0.95,
+      "source": "photo",
+      "needs_confirmation": false
+    },
+    "rooms_count": {
+      "value": 3,
+      "confidence": 0.85,
+      "source": "photo",
+      "needs_confirmation": false
+    },
+    "condition": {
+      "value": "Хорошее",
+      "confidence": 0.70,
+      "source": "photo",
+      "needs_confirmation": true
+    },
+    "amenities": {
+      "value": ["Балкон", "Кондиционер", "Мебель"],
+      "confidence": 0.90,
+      "source": "photo",
+      "needs_confirmation": false
+    },
+    "area": {
+      "value": 85.5,
+      "unit": "sqm",
+      "confidence": 0.80,
+      "source": "user",
+      "needs_confirmation": false
+    },
+    "floor": {
+      "value": 5,
+      "confidence": 0.95,
+      "source": "user",
+      "needs_confirmation": false
+    },
+    "location": {
+      "value": "Душанбе, центр",
+      "confidence": 0.60,
+      "source": "user",
+      "needs_confirmation": true
+    }
+  },
+  "generated_titles": [
+    {
+      "style": "short",
+      "text": "3-комнатная квартира в центре"
+    },
+    {
+      "style": "selling",
+      "text": "Просторная 3-комнатная квартира с ремонтом в сердце Душанбе!"
+    },
+    {
+      "style": "neutral",
+      "text": "Продается квартира: 3 комнаты, 85 кв.м, 5 этаж"
+    }
+  ],
+  "generated_descriptions": [
+    {
+      "style": "short",
+      "text": "Квартира в хорошем состоянии, с балконом и мебелью."
+    },
+    {
+      "style": "selling",
+      "text": "Идеальный вариант для семьи! Светлая и уютная квартира с современным ремонтом, всеми удобствами и отличным расположением."
+    },
+    {
+      "style": "neutral",
+      "text": "Объект: квартира. Количество комнат: 3. Площадь: 85 кв.м. Состояние: хорошее. Удобства: балкон, кондиционер, мебель."
+    }
+  ],
+  "photo_coach": {
+    "quality_assessment": {
+      "lighting": "good",
+      "blur": false,
+      "framing": "adequate",
+      "overall_score": 8
+    },
+    "missing_angles": [
+      "kitchen",
+      "bathroom"
+    ],
+    "sensitive_info_detected": [
+      {
+        "type": "faces",
+        "suggestion": "blur"
+      }
+    ]
+  },
+  "readiness_checklist": {
+    "required_fields_filled": {
+      "type": true,
+      "rooms_count": true,
+      "condition": true,
+      "amenities": true,
+      "photos_min_count": true
+    },
+    "readiness_percentage": 90,
+    "missing_items": [
+      "Фото кухни"
+    ],
+    "suggestions": [
+      {
+        "action": "add_photo",
+        "details": "Добавьте фото кухни и ванной"
+      },
+      {
+        "action": "confirm_field",
+        "details": "Подтвердите состояние"
+      }
+    ],
+    "inconsistencies": []
+  },
+  "user_inputs": {
+    "price": 50000,
+    "additional_notes": "Рядом с метро"
+  },
+  "language": "ru",
+  "timestamp": "2026-01-03T12:00:00Z"
+}

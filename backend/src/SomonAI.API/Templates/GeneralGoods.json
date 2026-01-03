@@ -1,0 +1,117 @@
+{
+  "category": "Общие товары",
+  "extracted_characteristics": {
+    "subcategory": {
+      "value": "Смартфон",
+      "confidence": 0.96,
+      "source": "photo",
+      "needs_confirmation": false
+    },
+    "brand": {
+      "value": "Samsung",
+      "confidence": 0.89,
+      "source": "photo",
+      "needs_confirmation": false
+    },
+    "model": {
+      "value": "Galaxy S21",
+      "confidence": 0.82,
+      "source": "photo",
+      "needs_confirmation": false
+    },
+    "condition": {
+      "value": "Новое",
+      "confidence": 0.95,
+      "source": "photo",
+      "needs_confirmation": false
+    },
+    "key_features": {
+      "value": ["5G", "128GB", "Камера 64MP"],
+      "confidence": 0.75,
+      "source": "user",
+      "needs_confirmation": true
+    },
+    "size": {
+      "value": "6.2 дюйма",
+      "confidence": 0.80,
+      "source": "user",
+      "needs_confirmation": false
+    },
+    "material": {
+      "value": "Стекло/металл",
+      "confidence": 0.70,
+      "source": "photo",
+      "needs_confirmation": true
+    }
+  },
+  "generated_titles": [
+    {
+      "style": "short",
+      "text": "Samsung Galaxy S21"
+    },
+    {
+      "style": "selling",
+      "text": "Новый Samsung Galaxy S21 с суперкамерой по акции!"
+    },
+    {
+      "style": "neutral",
+      "text": "Продается смартфон: Samsung Galaxy S21, новое"
+    }
+  ],
+  "generated_descriptions": [
+    {
+      "style": "short",
+      "text": "Смартфон в новом состоянии, 128GB."
+    },
+    {
+      "style": "selling",
+      "text": "Флагманский смартфон с отличной камерой, поддержкой 5G и большим экраном – идеальный выбор!"
+    },
+    {
+      "style": "neutral",
+      "text": "Категория: смартфон. Бренд: Samsung. Модель: Galaxy S21. Состояние: новое. Характеристики: 5G, 128GB, камера 64MP."
+    }
+  ],
+  "photo_coach": {
+    "quality_assessment": {
+      "lighting": "good",
+      "blur": false,
+      "framing": "adequate",
+      "overall_score": 7
+    },
+    "missing_angles": [
+      "back",
+      "details"
+    ],
+    "sensitive_info_detected": []
+  },
+  "readiness_checklist": {
+    "required_fields_filled": {
+      "subcategory": true,
+      "condition": true,
+      "key_features": true,
+      "photos_min_count": true
+    },
+    "readiness_percentage": 85,
+    "missing_items": [
+      "Фото задней стороны"
+    ],
+    "suggestions": [
+      {
+        "action": "add_photo",
+        "details": "Добавьте фото сзади и деталей"
+      },
+      {
+        "action": "confirm_field",
+        "details": "Подтвердите ключевые характеристики"
+      }
+    ],
+    "inconsistencies": []
+  },
+  "user_inputs": {
+    "price": 500,
+    "additional_notes": "В комплекте чехол"
+  },
+  "language": "ru",
+  "timestamp": "2026-01-03T12:00:00Z"
+}

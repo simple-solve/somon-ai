@@ -1,0 +1,125 @@
+{
+  "category": "Авто",
+  "extracted_characteristics": {
+    "body_type": {
+      "value": "Седан",
+      "confidence": 0.98,
+      "source": "photo",
+      "needs_confirmation": false
+    },
+    "color": {
+      "value": "Черный",
+      "confidence": 0.92,
+      "source": "photo",
+      "needs_confirmation": false
+    },
+    "brand": {
+      "value": "Toyota",
+      "confidence": 0.85,
+      "source": "photo",
+      "needs_confirmation": false
+    },
+    "model": {
+      "value": "Camry",
+      "confidence": 0.80,
+      "source": "photo",
+      "needs_confirmation": true
+    },
+    "year": {
+      "value": 2018,
+      "confidence": 0.75,
+      "source": "user",
+      "needs_confirmation": false
+    },
+    "mileage": {
+      "value": 50000,
+      "unit": "km",
+      "confidence": 0.90,
+      "source": "user",
+      "needs_confirmation": false
+    },
+    "engine_type": {
+      "value": "Бензин",
+      "confidence": 0.70,
+      "source": "user",
+      "needs_confirmation": true
+    },
+    "condition": {
+      "value": "Отличное",
+      "confidence": 0.88,
+      "source": "photo",
+      "needs_confirmation": false
+    }
+  },
+  "generated_titles": [
+    {
+      "style": "short",
+      "text": "Toyota Camry 2018"
+    },
+    {
+      "style": "selling",
+      "text": "Надежный Toyota Camry в отличном состоянии по выгодной цене!"
+    },
+    {
+      "style": "neutral",
+      "text": "Продается автомобиль: Toyota Camry, 2018 год, 50 000 км"
+    }
+  ],
+  "generated_descriptions": [
+    {
+      "style": "short",
+      "text": "Седан черного цвета, бензин, отличное состояние."
+    },
+    {
+      "style": "selling",
+      "text": "Комфортный и экономичный седан с низким пробегом, полным пакетом опций и безупречным видом."
+    },
+    {
+      "style": "neutral",
+      "text": "Тип кузова: седан. Цвет: черный. Марка: Toyota. Модель: Camry. Год: 2018. Пробег: 50 000 км. Двигатель: бензин. Состояние: отличное."
+    }
+  ],
+  "photo_coach": {
+    "quality_assessment": {
+      "lighting": "good",
+      "blur": false,
+      "framing": "adequate",
+      "overall_score": 9
+    },
+    "missing_angles": [
+      "interior"
+    ],
+    "sensitive_info_detected": [
+      {
+        "type": "license_plate",
+        "suggestion": "mask"
+      }
+    ]
+  },
+  "readiness_checklist": {
+    "required_fields_filled": {
+      "body_type": true,
+      "color": true,
+      "brand": true,
+      "model": true,
+      "photos_min_count": true
+    },
+    "readiness_percentage": 95,
+    "missing_items": [],
+    "suggestions": [
+      {
+        "action": "add_photo",
+        "details": "Добавьте фото интерьера"
+      }
+    ],
+    "inconsistencies": [
+      "Модель не совпадает с фото"
+    ]
+  },
+  "user_inputs": {
+    "price": 15000,
+    "additional_notes": "Один владелец"
+  },
+  "language": "ru",
+  "timestamp": "2026-01-03T12:00:00Z"
+}
