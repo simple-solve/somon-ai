@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 10, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/User/Desktop/somon-ai/frontend/src/app/providers/providers.tsx"],"sourcesContent":["'use client';\r\n\r\nimport {ReactNode} from 'react';\r\nimport {QueryClient, QueryClientProvider} from '@tanstack/react-query';\r\nimport {AbstractIntlMessages, NextIntlClientProvider} from 'next-intl';\r\nimport {MantineProvider} from \"@mantine/core\";\r\nimport '@mantine/core/styles.css';\r\n\r\nconst queryClient = new QueryClient();\r\n\r\ntype Props = {\r\n  children: ReactNode;\r\n  locale: string;\r\n  messages: AbstractIntlMessages;\r\n};\r\n\r\n\r\nexport default function Providers({children, locale, messages}: Props) {\r\n  return (\r\n    <NextIntlClientProvider locale={locale} messages={messages}>\r\n      <QueryClientProvider client={queryClient}>\r\n        <MantineProvider>\r\n          {children}\r\n        </MantineProvider>\r\n      </QueryClientProvider>\r\n    </NextIntlClientProvider>\r\n  );\r\n}\r\n"],"names":[],"mappings":";;;;;AAGA;AAAA;AACA;AACA;AALA;;;;;;AAQA,MAAM,cAAc,IAAI,4LAAW;AASpB,SAAS,UAAU,EAAC,QAAQ,EAAE,MAAM,EAAE,QAAQ,EAAQ;IACnE,qBACE,8OAAC,6QAAsB;QAAC,QAAQ;QAAQ,UAAU;kBAChD,cAAA,8OAAC,6MAAmB;YAAC,QAAQ;sBAC3B,cAAA,8OAAC,0MAAe;0BACb;;;;;;;;;;;;;;;;AAKX"}}]
-}
